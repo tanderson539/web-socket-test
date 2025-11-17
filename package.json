@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.ts"
+    "start": "nodemon src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,15 +18,20 @@
   },
   "homepage": "https://github.com/tanderson539/web-socket-test#readme",
   "dependencies": {
+    "@types/eslint": "^9.6.1",
+    "eslint": "^9.39.1",
     "express": "^5.1.0",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.11",
+    "uuid": "^13.0.0",
     "ws": "^8.18.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "@types/ws": "^8.18.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }

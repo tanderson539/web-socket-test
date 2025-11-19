@@ -56,6 +56,7 @@ wss.on('connection', (ws, req) => {
 
     ws.on('close', (code, reason) => {
         console.log(`Client disconnected - Code: ${code}, Reason: ${reason}`);
+        clients.delete(user);
         broadcastMessage(`${user.nickname} disconnected.`, null, user.room);
     });
 });
@@ -82,7 +83,6 @@ const broadcastMessage = (
 
     clients.forEach((user) => {
         if (
-            user != sender &&
             user.connection.readyState === user.connection.OPEN &&
             user.room === room
         ) {
